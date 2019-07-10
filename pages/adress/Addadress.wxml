@@ -1,0 +1,48 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="Address_all">
+    <view class="input1 callPeo">
+      <text>联系人:</text>
+      <input placeholder="用于收货时联系"></input>
+    </view>
+    <view class=" input1 section  ">
+      <view class="section__title">性别:</view>
+      <radio-group name="radio-group" class="section_gap">
+        <label class="man">
+          <radio value="radio1" />男</label>
+        <label class="women">
+          <radio value="radio2" />女</label>
+      </radio-group>
+    </view>
+
+    <view class="input1 telphone">
+      <text>手机号:</text>
+      <input></input>
+    </view>
+
+    <view class=" input1 Address">
+      <text>地址:</text>
+      <input placeholder="请选择收货地址"></input>
+      <image style="width:60rpx;height:60rpx" src="/static/icon/my/right_more.png"></image>
+    </view>
+
+    <view class=" input1 Address_Detail">
+      <text>详细地址:</text>
+      <input placeholder="如:四期五栋一单元1402"></input>
+    </view>
+
+    <view class=" input1 Label">
+      <view>标签:</view>
+      <view class="label_text">
+        <text class="label_click">公司</text>
+        <text class="label_click">家</text>
+        <text class="label_click">学校</text>
+      </view>
+    </view>
+  </view>
+
+
+</form>
+<view class="btn-area">
+  <button form-type="submit">保存</button>
+  <button form-type="reset">重置</button>
+</view>

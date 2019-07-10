@@ -1,0 +1,8 @@
+<view>
+  <view class="addNew" catchtap="addNew">
+    <image style="width:50rpx;height:50rpx;" src="/static/icon/shopCar/jia.png"></image>
+    新增收货地址
+  </view>
+
+
+</view>

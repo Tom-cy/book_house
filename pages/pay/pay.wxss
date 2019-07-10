@@ -1,0 +1,13 @@
+view button {
+  color: #fff;
+  /* border: none; */
+}
+.pay {
+  background-color: #7ca7d2;
+}
+.cancel {
+  background-color: #d4d3d3;
+}
+view button:hover {
+  color: #fff;
+}

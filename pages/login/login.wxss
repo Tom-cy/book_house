@@ -1,0 +1,89 @@
+ .tips {
+  font-size: 26rpx;
+  color: rgb(168, 12, 12);
+  text-align: center;
+  padding-top: 10rpx;
+}
+
+.top {
+  text-align: center;
+  margin: 80rpx 0 50px 0;
+}
+.top .logo{
+  width: 215rpx;
+  height: 215rpx;
+  background: url(https://static.luckincoffeecdn.com/mini/images/login/logo.png);
+  background-size: cover;
+}
+
+.form {
+  margin: 500rpx 100rpx;
+}
+.form view {
+  margin-bottom: 10rpx;
+}
+.form view.bt {
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+.form input {
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}
+.form text.clearInput {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 30rpx;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('https://static.luckincoffeecdn.com/mini/images/login/icon_remove.png');
+}
+.form button.verifycode {
+    position: absolute;
+    right: 0;
+    top: 25rpx;
+    width: 156rpx;
+    line-height: 44rpx;
+    font-size: 22rpx;
+    padding: 0rpx 15rpx;
+    color: #80AAD3;
+    background: #fff;
+    border-radius: 50rpx;
+    border: 1px solid #80AAD3;
+}
+
+.form .blue {
+    color: #3f5e8b;
+}
+.form .queding {
+  margin-top:38rpx;
+  background-color:#7CA7D2;
+  color:#fff;
+  font-size:32rpx;
+  border:none;
+
+}
+.form .text {
+    margin-top: 15rpx;
+    font-size: 22rpx;
+    text-align: center;
+    color: #666;
+}
+
+/* 小x */
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.form .btn {
+    margin-top: 38rpx;
+    background-color: #7CA7D2;
+    color: #fff;
+    font-size: 32rpx;
+    border: none;
+}

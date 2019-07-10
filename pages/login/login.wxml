@@ -1,0 +1,32 @@
+ <!-- <view class="top">
+    <image class="logo"></image>
+</view> -->
+
+<view class="form">
+
+    <form bindsubmit='login'>
+        <view class="bt">
+            <input placeholder="请输入手机号" name='phoneNumber' value="{{mobile}}"></input>
+            <text bindtouchstart="clearMobileInput" class="clearInput{{clearBtnState}}"></text>
+        </view>
+
+        <view class="bt">
+          <input placeholder="请输入密码" class="verifycode" name='password' type='password' value="{{password}}"></input>
+          <text bindtouchstart="clearMobileInput" class="clearInput{{clearBtnState}}"></text>
+        </view>
+
+        <view class="tips" wx:if="{{isShow}}">
+          <text>用户名或密码不正确</text>
+        </view>
+
+        <view>
+            <button form-type='submit' class="btn {{submitState}}">确定</button>
+        </view>
+
+    </form>
+    <view class="text">
+        <text>点击确定，即表示已阅读并同意</text>
+        <text class="blue">《注册会员服务条款》</text>
+    </view>
+
+</view>
