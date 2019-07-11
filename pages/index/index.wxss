@@ -306,11 +306,14 @@ swiper {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
+  overflow: hidden;
 }
 .NewYear_c text{
   border: 1px solid rgba(153,127,85,.6);
   margin-right: 10px;
+  margin-bottom: 5px;
   padding: 4px 8px;
   border-bottom-right-radius: 15px;
 }

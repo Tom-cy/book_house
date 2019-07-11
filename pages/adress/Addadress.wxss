@@ -1,7 +1,6 @@
-.btn-area{
-  /* position: fixed; */
-  /* bottom: 0; */
+.btn-area {
 }
+
 .Address_all {
   padding: 20rpx 20rpx;
   box-sizing: border-box;
@@ -32,13 +31,13 @@
   /* width: 100%; */
   display: flex;
   justify-content: space-around;
-  
 }
-.man{
-  margin-left: 40rpx;
 
+.man {
+  margin-left: 40rpx;
 }
-.women{
+
+.women {
   margin-left: 40rpx;
 }
 
@@ -47,8 +46,16 @@
 }
 
 .Address {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+
+.imgflo {
+  position: absolute;
+  right: 0;
+}
+
+.input_adre {
+  min-width: 80%;
 }
 
 .Address_Detail {
@@ -62,7 +69,8 @@
 .label_text {
   margin-left: 20rpx;
 }
-.label_click{
+
+.label_click {
   display: inline-block;
   margin-right: 10px;
   width: 70px;
@@ -73,6 +81,21 @@
   /* border: 1px solid #000; */
   background-color: #ccc;
 }
-.label_click:hover{
+
+.isLabel {
   background-color: rgb(19, 189, 231);
+    display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+}
+
+.sureAdress {
+  margin: 0 20rpx;
+  height: 100rpx;
+  line-height: 80rpx;
+  border-bottom: 1px dashed #ccc;
 }

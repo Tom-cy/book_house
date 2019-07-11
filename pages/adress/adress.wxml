@@ -1,8 +1,32 @@
 <view>
+
+  <view class="allAdress">
+    <view class="AdressOne">
+      <view class="adress_where">
+        <view class="adress_long">好长的**********************</view>
+        <view class="adres_deta">
+          <text class="detail">默认地址</text>
+          <text class="house">家</text>
+          <text class="tel">15870633517</text>
+          <text class="name">陈园</text>
+        </view>
+      </view>
+      <view class="close">
+         <icon type="clear"></icon>
+      </view>
+
+    </view>
+  </view>
+
+
+
+
+
+
+
+
   <view class="addNew" catchtap="addNew">
     <image style="width:50rpx;height:50rpx;" src="/static/icon/shopCar/jia.png"></image>
     新增收货地址
   </view>
-
-
 </view>

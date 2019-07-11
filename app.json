@@ -1,9 +1,9 @@
  {
   "pages": [
     "pages/index/index",
-    "pages/adress/Addadress",
-    "pages/img/img",
     "pages/adress/adress",
+    "pages/adress/Addadress",
+    "pages/adress/map/map",
     "pages/shopCart/shopCart",
     "pages/pay/pay",
     "pages/checkorder/checkorder",

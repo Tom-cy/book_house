@@ -17,7 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+   
   },
 
   /**
@@ -43,7 +43,6 @@ Page({
         },
         success: function(res) {
           if (res.data.error === 0) {
-            console.log(res.data.data)
             that.setData({
               shopCarList: res.data.data
             })
@@ -90,9 +89,7 @@ Page({
     shopCarList.forEach(v => {
       if (v.isbn == isBN) {
         v.checked = v.checked === 1 ? 0 : 1
-        console.log(v)
         if (v.checked) {
-          console.log("选中")
           shopCarNum += v.num
           shopCarPrice += v.num * parseInt(v.price)
           wx.setTabBarBadge({
@@ -101,7 +98,6 @@ Page({
           })
 
         } else {
-          console.log("没选中")
           shopCarNum -= v.num
           shopCarPrice -= v.num * parseInt(v.price)
           wx.setTabBarBadge({
@@ -222,8 +218,16 @@ Page({
     let shopCarNum = this.data.shopCarNum
     let shopCarList = this.data.shopCarList
     let data = shopCarList.filter(v => v.checked)
-    wx.navigateTo({
-      url: "/pages/checkorder/checkorder?shopCarPrice=" + JSON.stringify(shopCarPrice) + "&shopCarNum=" + JSON.stringify(shopCarNum) + "&shopCarList=" + JSON.stringify(data),
-    })
+    let dataNum = shopCarList.filter(v => v.num)
+    if (!dataNum.length) {
+      wx.showModal({
+        title: '商品',
+        content: '请选中商品',
+      })
+    } else {
+      wx.navigateTo({
+        url: "/pages/checkorder/checkorder?shopCarPrice=" + JSON.stringify(shopCarPrice) + "&shopCarNum=" + JSON.stringify(shopCarNum) + "&shopCarList=" + JSON.stringify(data),
+      })
+    }
   }
 })

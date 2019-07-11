@@ -1,21 +1,82 @@
-// pages/adress/Addadress.js
+const app = getApp()
+const api = app.globalData.apiUrl
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    formname: '',
+    formtel: '',
+    fromAddress: '',
+    fromDetailAdre: '',
+    chosela: '',
+    default: false,
+    userInfo: ''
   },
 
   formSubmit: function(e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    let chosela = this.data.chosela
+    let defa = this.data.default
+    let userInfo = this.data.userInfo
+
+    let userName = userInfo.userName
+    let phoneNumber = userInfo.phoneNumber
+    // 联系人所有的数据
+    let allData = {
+      adressName: e.detail.value.formname,
+      adressTel: e.detail.value.formtel,
+      adressAddres: e.detail.value.fromAddress,
+      adressAdtail: e.detail.value.fromDetailAdre,
+      adresssex: e.detail.value.radio_group,
+      addressBal: chosela,
+      addressDetail: defa,
+    }
+    // 将用户地址信息添加至数据库
+    wx.request({
+      url: `${api.apiUrl}/addAdress.js`,
+      data: {
+        userName,
+        phoneNumber,
+        allData
+      },
+      success: res => {
+        console.log(res)
+      }
+    })
+    wx.setStorageSync("allData", allData)
+    wx.navigateBack()
+
   },
   formReset: function() {
-    console.log('form发生了reset事件')
+    this.setData({
+      formname: '',
+      formtel: '',
+      fromAddress: '',
+      fromDetailAdre: '',
+      chosela: '',
+      default: false,
+      snum: ''
+    })
   },
-
-
+  gotomap() {
+    wx.navigateTo({
+      url: "/pages/adress/map/map",
+    })
+  },
+  choselabel(e) {
+    this.setData({
+      chosela: e.target.dataset.value,
+      snum: e.target.dataset.num
+    })
+  },
+  sureAdres(e) {
+    let defau = this.data.default
+    defau = !defau
+    this.setData({
+      default: defau
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -27,6 +88,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    let address = wx.getStorageSync("address")
+    let userInfo = app.globalData.loginUserInfo
+    this.setData({
+      fromAddress: address,
+      userInfo
+    })
 
   },
 

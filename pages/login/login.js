@@ -25,7 +25,6 @@ Page({
         password
       },
       success(res) {
-        console.log(res.data.data)
         if (!res.data.error) {
           app.globalData.loginUserInfo = res.data.userInfo
           wx.setStorage({

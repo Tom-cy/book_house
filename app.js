@@ -30,16 +30,16 @@ App({
               }
             }
           })
-        }
+        }  
       }
     })
   },
   globalData: {
     userInfo: null,
-   
+
     loginUserInfo: null,
     apiUrl: api,
     BaseURL: 'https://www.easy-mock.com/mock/5cf8e0cc5f6a0303145d4251/book',
-    Baseurl:'https://m.kongfz.com/operation/mobile/ajax/getIndexSquare?'
+    Baseurl: 'https://m.kongfz.com/operation/mobile/ajax/getIndexSquare?'
   }
 })

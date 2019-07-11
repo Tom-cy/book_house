@@ -17,19 +17,19 @@ Page({
     let shopCarList = JSON.parse(options.shopCarList)
     let shopCarNum = JSON.parse(options.shopCarNum)
     let shopCarPrice = JSON.parse(options.shopCarPrice)
-    
+    let data = shopCarList.filter(v => v.num)
     this.setData({
-      shopCarList,
+      shopCarList:data,
       shopCarNum,
       shopCarPrice
     })
   },
-  gopay(){
+  gopay() {
     wx.navigateTo({
       url: "/pages/pay/pay",
     })
   },
-  gotoAdress(){
+  gotoAdress() {
     wx.navigateTo({
       url: "/pages/adress/adress",
     })
