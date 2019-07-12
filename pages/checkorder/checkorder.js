@@ -7,19 +7,23 @@ Page({
   data: {
     shopCarList: [],
     shopCarNum: null,
-    shopCarPrice: null
+    shopCarPrice: null,
+    adressdata:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let shopCarList = JSON.parse(options.shopCarList)
-    let shopCarNum = JSON.parse(options.shopCarNum)
-    let shopCarPrice = JSON.parse(options.shopCarPrice)
+    let shopCarList = wx.getStorageSync("shopdata") || []
+    let shopCarNum = wx.getStorageSync("shopCarNum") || []
+    let shopCarPrice = wx.getStorageSync("shopCarPrice") || []
+
+
+
     let data = shopCarList.filter(v => v.num)
     this.setData({
-      shopCarList:data,
+      shopCarList: data,
       shopCarNum,
       shopCarPrice
     })
@@ -31,7 +35,7 @@ Page({
   },
   gotoAdress() {
     wx.navigateTo({
-      url: "/pages/adress/adress",
+      url: "/pages/adress/adress"
     })
   },
   /**
@@ -45,7 +49,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    let adressdata = wx.getStorageSync("adress") || []
+    this.setData({
+      adressdata
+    })
   },
 
   /**

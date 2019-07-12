@@ -80,17 +80,20 @@
   position: absolute;
   bottom: 0;
   height: 80rpx;
-  width: 98%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.568);  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 4rpx 8rpx;
+  box-sizing: border-box;
 }
 .pay{
   width: 80px;
   height: 100%;
   background-color: rgb(61, 219, 240);
-  line-height: 80rpx;
+  line-height: 70rpx;
   text-align: center;
+  border-radius: 4px;
 }

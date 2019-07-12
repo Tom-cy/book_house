@@ -3,15 +3,17 @@
   <!-- 配送信息 -->
   <view class="checkorder_info" catchtap="gotoAdress">
     <view class="checkorder_tit">配送信息</view>
-    <view class="checkorder_tit_bottom">
+    <view class="checkorder_tit_bottom" wx:for="{{adressdata}}" wx:key="key">
       <view class="checkorder_tit_bo">
         <view class="checkorder_bo_one">
           <image style="width:15px;height:15px" src="/static/icon/checkorder/adress.png"></image>
-          <text class="checkorder_bo_font">您目前还没有设置收获地址</text>
+          <text class="checkorder_bo_font" wx:if="{{adressdata.length > 0}}">{{item.adressAddres}}{{item.adressAdtail}}</text>
+          <text class="checkorder_bo_font" wx:if="{{adressdata.length == 0}}">您目前还没有设置收获地址</text>
         </view>
         <view>
           <image style="width:15px;height:15px" src="/static/icon/checkorder/tel.png"></image>
-          <text class="checkorder_bo_font">男士</text>
+          <text class="checkorder_bo_font"  wx:if="{{adressdata.length == 0}}">无信息</text>
+          <text class="checkorder_bo_font"  wx:if="{{adressdata.length > 0}}">{{item.adressTel}}{{item.adressName}}  ({{item.adresssex ==="women" ? "女士":"先生"}})</text>
         </view>
       </view>
       <view>
@@ -25,7 +27,7 @@
     <!-- 所有的数据 -->
     <view class="checkorder_order_data">
       <!-- 单一数据 -->
-      <view class="checkorder_data_one"   wx:for="{{shopCarList}}" wx:key="{{key}}">
+      <view class="checkorder_data_one" wx:for="{{shopCarList}}" wx:key="{{key}}">
         <!-- 左侧 -->
         <view>
           <view>{{item.itemName}}</view>
@@ -42,10 +44,10 @@
     <view class="checkorder_book_all">合计￥{{shopCarPrice}}</view>
   </view>
 
+</view>
 
   <!-- 支付按钮 -->
-  <view class="checkorder_pay"  catchtap="gopay">
+  <view class="checkorder_pay" catchtap="gopay">
     <view>共计:{{shopCarPrice}}</view>
     <view class="pay">支付</view>
   </view>
-</view>

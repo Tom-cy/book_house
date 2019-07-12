@@ -1,32 +1,30 @@
-<view>
-
-  <view class="allAdress">
-    <view class="AdressOne">
-      <view class="adress_where">
-        <view class="adress_long">好长的**********************</view>
-        <view class="adres_deta">
-          <text class="detail">默认地址</text>
-          <text class="house">家</text>
-          <text class="tel">15870633517</text>
-          <text class="name">陈园</text>
+<view class="allAdress" wx:if="{{allData.length>0}}">
+  <view class="AdressOne" catchtap="gobackOrder"  wx:for="{{allData}}" wx:key="{{key}}"  data-id="{{item.addressId}}">
+    <view class="adress_where">
+      <view class="adress_long">
+        <view class="adress_long_de">
+          {{item.adressAddres}}{{item.adressAdtail}}
+        </view>
+        <view>
+          <view class="adres_deta">
+            <text class="detail" wx:if="{{item.addressDetail}}">默认地址</text>
+            <text class="house">{{item.addressBal}}</text>
+            <text class="tel">{{item.adressTel}}</text>
+            <text class="name">{{item.adressName}} ({{item.adresssex ==="women" ? "女士":"先生"}})</text>
+          </view>
         </view>
       </view>
       <view class="close">
-         <icon type="clear"></icon>
+        <icon type="clear"></icon>
       </view>
-
     </view>
   </view>
+</view>
 
-
-
-
-
-
-
-
-  <view class="addNew" catchtap="addNew">
-    <image style="width:50rpx;height:50rpx;" src="/static/icon/shopCar/jia.png"></image>
-    新增收货地址
-  </view>
+<view class="bg_red" wx:if="{{allData.length<=0}}">
+  添加新地址
+</view>
+<view class="addNew" catchtap="addNew">
+  <image style="width:50rpx;height:50rpx;" src="/static/icon/shopCar/jia.png"></image>
+  新增收货地址
 </view>

@@ -31,17 +31,23 @@ Page({
         let allData = address.map(v => {
           return JSON.parse(v.allData)
         })
+        console.log(allData)
         this.setData({
           allData
         })
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
+  gobackOrder(e) {
+    let allData = this.data.allData
+    let id = e.currentTarget.dataset.id
+    let data = allData.filter(v => {
+      return v.addressId === id
+    })
+    wx.setStorageSync("adress", data)
+    wx.navigateTo({
+      url: "/pages/checkorder/checkorder" 
+    })
   },
   addNew(e) {
     wx.navigateTo({

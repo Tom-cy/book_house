@@ -17,11 +17,27 @@ Page({
 
   formSubmit: function(e) {
     let chosela = this.data.chosela
+    if (chosela === 'company') {
+      chosela = "公司"
+    } else if (chosela === 'house') {
+      chosela = "家"
+    } else {
+      chosela = "学校"
+    }
     let defa = this.data.default
     let userInfo = this.data.userInfo
 
     let userName = userInfo.userName
     let phoneNumber = userInfo.phoneNumber
+    // 定义一个时间戳
+      var myDate = new Date();
+    let aa = myDate.getFullYear().toString()
+    let bb = (myDate.getMonth() + 1).toString()
+    let cc = myDate.getDate().toString()
+    let dd = myDate.getHours().toString()
+    let ee = myDate.getMinutes().toString()
+    let ff = myDate.getSeconds().toString()
+    let id = aa + bb + cc + dd + ee + ff
     // 联系人所有的数据
     let allData = {
       adressName: e.detail.value.formname,
@@ -31,17 +47,19 @@ Page({
       adresssex: e.detail.value.radio_group,
       addressBal: chosela,
       addressDetail: defa,
+      addressId: id
+      
     }
     // 将用户地址信息添加至数据库
     wx.request({
-      url: `${api.apiUrl}/addAdress.js`,
+      url: `${api.apiUrl}/addAdress`,
       data: {
         userName,
         phoneNumber,
         allData
       },
       success: res => {
-        console.log(res)
+        console.log(res.data.data)
       }
     })
     wx.setStorageSync("allData", allData)

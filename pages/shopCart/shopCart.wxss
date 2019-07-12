@@ -1,3 +1,8 @@
+.lowB{
+  text-align: center;
+  margin-top: 100px;
+}
+
 .shopCar {
   position: relative;
   width: 100%;
@@ -9,7 +14,7 @@
 
 .shopScroll {
   width: 100%;
-  height: 200rpx;
+  height: 220rpx;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

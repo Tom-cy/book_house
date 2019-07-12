@@ -17,7 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-   
+
   },
 
   /**
@@ -54,7 +54,7 @@ Page({
     })
     shopCar.then(respone => {
       let shopPrice = respone.map((v, i) => {
-        return (parseInt(v.price)) * (v.num)
+        return (+(v.price)) * (v.num)
       })
       let shopnum = respone.map((v, i) => {
         return (parseInt(v.num))
@@ -73,6 +73,7 @@ Page({
       })
       shopPrice.forEach(v => {
         i += v
+        console.log(i)
         that.setData({
           shopCarPrice: i
         })
@@ -91,7 +92,8 @@ Page({
         v.checked = v.checked === 1 ? 0 : 1
         if (v.checked) {
           shopCarNum += v.num
-          shopCarPrice += v.num * parseInt(v.price)
+          shopCarPrice += v.num * +(v.price)
+          shopCarPrice = Math.floor(shopCarPrice * 100) / 100;
           wx.setTabBarBadge({
             index: 2,
             text: shopCarNum + '',
@@ -99,7 +101,8 @@ Page({
 
         } else {
           shopCarNum -= v.num
-          shopCarPrice -= v.num * parseInt(v.price)
+          shopCarPrice -= v.num * +(v.price)
+          shopCarPrice = Math.floor(shopCarPrice * 100) / 100;
           wx.setTabBarBadge({
             index: 2,
             text: shopCarNum + '',
@@ -127,7 +130,8 @@ Page({
           return
         } else if (v.num >= 0) {
           shopCarNum -= 1
-          shopCarPrice -= parseInt(v.price)
+          shopCarPrice -= +(v.price)
+          shopCarPrice = Math.floor(shopCarPrice * 100) / 100;
           v.num -= 1
           wx.setTabBarBadge({
             index: 2,
@@ -155,7 +159,8 @@ Page({
       if (v.isbn == isBN) {
         if (v.num >= 0) {
           shopCarNum += 1
-          shopCarPrice += parseInt(v.price)
+          shopCarPrice += +(v.price)
+          shopCarPrice = Math.floor(shopCarPrice * 100) / 100;
           v.num += 1
           wx.setTabBarBadge({
             index: 2,
@@ -167,7 +172,7 @@ Page({
     this.setData({
       shopCarList,
       shopCarNum,
-      shopCarPrice
+      shopCarPrice 
     })
   },
 
@@ -217,8 +222,11 @@ Page({
     let shopCarPrice = this.data.shopCarPrice
     let shopCarNum = this.data.shopCarNum
     let shopCarList = this.data.shopCarList
-    let data = shopCarList.filter(v => v.checked)
+    let shopdata = shopCarList.filter(v => v.checked)
     let dataNum = shopCarList.filter(v => v.num)
+    wx.setStorageSync("shopCarPrice", shopCarPrice)
+    wx.setStorageSync("shopCarNum", shopCarNum)
+    wx.setStorageSync("shopdata", shopdata)
     if (!dataNum.length) {
       wx.showModal({
         title: '商品',
@@ -226,7 +234,7 @@ Page({
       })
     } else {
       wx.navigateTo({
-        url: "/pages/checkorder/checkorder?shopCarPrice=" + JSON.stringify(shopCarPrice) + "&shopCarNum=" + JSON.stringify(shopCarNum) + "&shopCarList=" + JSON.stringify(data),
+        url: "/pages/checkorder/checkorder"
       })
     }
   }
