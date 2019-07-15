@@ -3,17 +3,32 @@
   <!-- 配送信息 -->
   <view class="checkorder_info" catchtap="gotoAdress">
     <view class="checkorder_tit">配送信息</view>
-    <view class="checkorder_tit_bottom" wx:for="{{adressdata}}" wx:key="key">
+    <!-- 用户填写了地址信息 -->
+    <view class="checkorder_tit_bottom" wx:for="{{adressdata}}" wx:key="key" wx:if="{{adressdata.length > 0}}">
       <view class="checkorder_tit_bo">
         <view class="checkorder_bo_one">
           <image style="width:15px;height:15px" src="/static/icon/checkorder/adress.png"></image>
-          <text class="checkorder_bo_font" wx:if="{{adressdata.length > 0}}">{{item.adressAddres}}{{item.adressAdtail}}</text>
+          <text class="checkorder_bo_font" >{{item.adressAddres}}{{item.adressAdtail}}</text>
+        </view>
+        <view>
+          <image style="width:15px;height:15px" src="/static/icon/checkorder/tel.png"></image>
+          <text class="checkorder_bo_font"   >{{item.adressTel}}{{item.adressName}}  ({{item.adresssex ==="women" ? "女士":"先生"}})</text>
+        </view>
+      </view>
+      <view>
+        <image style="width:20px;height:20px" src="/static/icon/my/right_more.png"></image>
+      </view>
+    </view>
+  <!-- 用户未填写了地址信息 -->
+    <view class="checkorder_tit_bottom" wx:if="{{adressdata.length == 0}}"  >
+      <view class="checkorder_tit_bo">
+        <view class="checkorder_bo_one">
+          <image style="width:15px;height:15px" src="/static/icon/checkorder/adress.png"></image>
           <text class="checkorder_bo_font" wx:if="{{adressdata.length == 0}}">您目前还没有设置收获地址</text>
         </view>
         <view>
           <image style="width:15px;height:15px" src="/static/icon/checkorder/tel.png"></image>
           <text class="checkorder_bo_font"  wx:if="{{adressdata.length == 0}}">无信息</text>
-          <text class="checkorder_bo_font"  wx:if="{{adressdata.length > 0}}">{{item.adressTel}}{{item.adressName}}  ({{item.adresssex ==="women" ? "女士":"先生"}})</text>
         </view>
       </view>
       <view>

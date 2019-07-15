@@ -24,7 +24,7 @@
   <view class="bookorder">
     <view class="orderTit">
       <text class="orderTit_one">书店订单</text>
-      <text>查看全部</text>
+      <text catchtap="goOrder">查看全部</text>
     </view>
     <view class="bookPay">
       <view class="bookPay_one" bindtap="myInfo" wx:for="{{orderList}}" wx:key="item.id" data-index="{{item.id}}" bindtap="{{item.goSrc}}">

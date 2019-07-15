@@ -82,7 +82,6 @@ Page({
         let a = []
         res.data.result.list.map(v => {
           if (v.style == 3) {
-            a.push.apply(a, v.data);
             that.setData({
               todaybookList: a
             })
@@ -98,6 +97,24 @@ Page({
       url: app.globalData.Baseurl + 'currPage=2',
       method: 'get',
       success: function(res) {
+
+        res.data.result.list.filter(v => {
+          if (v.dataId == 24) {
+            that.setData({
+              swipergoodbookList: v
+            })
+          }
+          // if (v.dataId == 32) {
+          //   that.setData({
+          //     allBookList: v
+          //   })
+          // } else if (v.dataId == 25) {
+          //   that.setData({
+          //     appDisplayList: v
+          //   })
+          // }
+        })
+
         return
       }
     })
@@ -111,10 +128,6 @@ Page({
             if (v.dataId == 32) {
               that.setData({
                 allBookList: v
-              })
-            } else if (v.dataId == 24) {
-              that.setData({
-                swipergoodbookList: v
               })
             } else if (v.dataId == 25) {
               that.setData({
@@ -153,7 +166,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-   
+
   },
 
   onPullDownRefresh: function() {

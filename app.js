@@ -36,7 +36,7 @@ App({
   },
   globalData: {
     userInfo: null,
-
+    orderList:null,
     loginUserInfo: null,
     apiUrl: api,
     BaseURL: 'https://www.easy-mock.com/mock/5cf8e0cc5f6a0303145d4251/book',

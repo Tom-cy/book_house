@@ -32,11 +32,11 @@
 
   <view class="shopCarPrice">
     <view class="shopCarPrice_fath">
-      <view class="shopCarPrice_icon">
-        <image catchtap="allSelect" src="/static/icon/shopCar/jia.png"></image>
+      <view class="shopCarPrice_icon" catchtap="allSelect">
+        <image src="/static/icon/shopCar/jia.png"></image>
         <text>全选</text>
       </view>
-      <view class="shopCarPrice_icon">
+      <view class="shopCarPrice_icon" catchtap="clearSelect">
         <image src="/static/icon/shopCar/jia.png"></image>
         <text>清空</text>
       </view>

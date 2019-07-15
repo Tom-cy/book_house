@@ -1,4 +1,5 @@
-// pages/checkorder/checkorder.js
+const app=  getApp()
+
 Page({
 
   /**
@@ -8,7 +9,7 @@ Page({
     shopCarList: [],
     shopCarNum: null,
     shopCarPrice: null,
-    adressdata:[]
+    adressdata: []
   },
 
   /**
@@ -29,6 +30,28 @@ Page({
     })
   },
   gopay() {
+    let userName = app.globalData.loginUserInfo.userName
+    let adressdata = this.data.adressdata
+    let shopCarList = this.data.shopCarList
+    let shopCarPrice = this.data.shopCarPrice
+    let shopCarNum = this.data.shopCarNum
+    let timeStamp = Date.now();
+
+    app.globalData.orderList = {
+      // 地址信息
+      adressdata,
+      // 订单号
+      timeStamp,
+      // 列表信息
+      shopCarList,
+      // 用户
+      userName,
+      // 总商品数
+      shopCarNum,
+      // 商品价格
+      shopCarPrice
+    }
+
     wx.navigateTo({
       url: "/pages/pay/pay",
     })

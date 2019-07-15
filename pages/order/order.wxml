@@ -1,0 +1,23 @@
+<view class="pageOrder">
+  <block wx:for="{{orderlist}}" wx:key="index">
+    <view class="orderOne" catchtap="bookDetail" data-stamp="{{item.timeStamp}}">
+      <view class="booktus">
+        <view>图书订单:{{item.timeStamp}}</view>
+        <view>{{item.orderStatis}}</view>
+      </view>
+      <view>
+        <view class="bookuser">
+          <view>{{item.owner}}</view>
+          <view>{{item.orderTime}}</view>
+        </view>
+        <view>
+          商品总数:{{item.orderAllnum}}
+        </view>
+        <view class="bookpri">
+          <view>￥{{item.orderMoney}}</view>
+          <view>去评价</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

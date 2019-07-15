@@ -1,5 +1,8 @@
  {
   "pages": [
+    "pages/my/my",
+    "pages/order/order",
+    "pages/order/orderDetail",
     "pages/index/index",
     "pages/adress/adress",
     "pages/adress/Addadress",
@@ -13,7 +16,6 @@
     "pages/channel/channel",
     "pages/booklist/booklist",
     "pages/book/book",
-    "pages/my/my",
     "pages/myInfo/myInfo",
     "pages/login/login",
     "pages/test/test"

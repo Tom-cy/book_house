@@ -14,7 +14,7 @@
           </view>
         </view>
       </view>
-      <view class="close">
+      <view class="close"  data-id="{{item.addressId}}" catchtap="close">
         <icon type="clear"></icon>
       </view>
     </view>

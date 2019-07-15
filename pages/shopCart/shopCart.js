@@ -73,7 +73,6 @@ Page({
       })
       shopPrice.forEach(v => {
         i += v
-        console.log(i)
         that.setData({
           shopCarPrice: i
         })
@@ -216,7 +215,14 @@ Page({
       shopCarList
     })
   },
-
+  // 清空订单
+  clearSelect(){
+    this.setData({
+      shopCarList:[],
+      shopCarPrice:0,
+      shopCarNum: 0
+    })
+  },
   // 结算订单
   gotoOrder(e) {
     let shopCarPrice = this.data.shopCarPrice

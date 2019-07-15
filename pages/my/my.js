@@ -79,7 +79,6 @@ Page({
         wx.navigateTo({
           url: "/pages/login/login",
         })
-
     }
 
 
@@ -87,6 +86,13 @@ Page({
     
 
   },
+
+
+goOrder(){
+  wx.navigateTo({
+    url: '/pages/order/order',
+  })
+},
 
   myInfo(e) {
     // let id = e.currentTarget.dataset.index

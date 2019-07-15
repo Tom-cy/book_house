@@ -1,4 +1,4 @@
-const app = getApp()
+const app = getApp();
 const api = app.globalData.apiUrl
 Page({
 
@@ -6,36 +6,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    orderDetailist: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
-  },
-  login(e) {
-    let phoneNumber = e.detail.value.phoneNumber
-    let password = e.detail.value.password
+    let timeStamp = options.timeStamp
+    let userInfo = app.globalData.loginUserInfo.userName
     wx.request({
-      url: `${api.apiUrl}/login`,
+      url: `${api.apiUrl}/getOrderList`,
       data: {
-        phoneNumber,
-        password
+        userInfo
       },
-      success(res) {
-        if (!res.data.error) {
-          app.globalData.loginUserInfo = res.data.userInfo
-          wx.setStorage({
-            key: "loginUserInfo",
-            data: res.data.userInfo || []
-          })
-          wx.navigateBack()
-        }
+      success: res => {
+        let data = res.data.data.filter(v => {
+          return v.timeStamp == timeStamp
+        })
+        console.log(data)
+        this.setData({
+          orderDetailist: data
+        })
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
