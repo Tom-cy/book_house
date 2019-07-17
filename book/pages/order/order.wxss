@@ -1,0 +1,32 @@
+.pageOrder {
+  background-color: rgba(204, 204, 204, 0.205);
+  padding: 10rpx 20rpx;
+}
+
+.orderOne {
+  background-color: #fff;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+  padding: 5rpx 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.booktus {
+  display: flex;
+  justify-content: space-between;
+  line-height: 70rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.bookuser {
+  display: flex;
+  justify-content: space-between;
+  line-height: 70rpx;
+}
+
+.bookpri {
+  display: flex;
+  line-height: 70rpx;
+  justify-content: space-between;
+}
+ 

@@ -1,0 +1,163 @@
+.lowB{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.shopCar {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(204, 204, 204, 0.63);
+  padding: 10rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.shopScroll {
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 10rpx;
+  border-radius: 10px;
+   background-color: rgba(255, 255, 255, 0.568);
+}
+
+.shopIconfath {
+  width: 50px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopimgFath {
+  width: 180rpx;
+  height: 200rpx;
+}
+
+.shopIcon {
+  width: 27px;
+  height: 27px;
+}
+
+.shopBook {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 400rpx;
+  height: 200rpx;
+}
+
+.shopBook_name {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.bookname {
+  font-size: 34rpx;
+}
+
+.author {
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 28rpx;
+  margin-top: 5px;
+}
+
+.sales {
+  margin-top: 20px;
+  font-size: 26rpx;
+}
+
+.shopcaradd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.shopcaradd_jian {
+  width: 22px;
+  height: 22px;
+}
+
+.shopcaradd_jia {
+  width: 22px;
+  height: 22px;
+}
+
+.shopcaradd_num {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.shopcaradd_num {
+  font-size: 30rpx;
+}
+
+.shopCarPrice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 24rpx;
+}
+
+.shopCarPrice_fath {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.shopCarPrice_icon {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopCarPrice_icon image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 5px;
+}
+
+.shopCarPrice_righ {
+  display: flex;
+  align-items: center;
+}
+
+.shopCarPrice_righ_2 {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.shopCarPrice_righ_3 {
+  font-size: 28rpx;
+  color: red;
+  margin-right: 5px;
+}
+
+.shopCarPrice_pay {
+  width: 160rpx;
+  height: 100%;
+  background-color: #49c1df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

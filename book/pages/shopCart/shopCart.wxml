@@ -1,0 +1,54 @@
+<view class="shopCar">
+  <scroll-view>
+    <view class="shopScroll" wx:for="{{shopCarList}}" wx:key="{{key}}" wx:if="{{shopCarList.length>0}}">
+      <view class="shopIconfath">
+
+        <!-- 当值为1时，属于选中状态   为0时，属于未选中状态 -->
+        <icon catchtap="isShowselect" class="shopIcon" data-isbn="{{item.isbn}}" style="background-image:url({{(item.checked) ?' /static/icon/shopCar/xuanzhong.png' : '/static/icon/shopCar/meixuan.png'}})"></icon>
+      </view>
+      <view class="shopimgFath">
+        <image style="width:100%;height:100%;margin-top:5px;" src="{{item.imgUrl}}"></image>
+      </view>
+      <view class="shopBook">
+        <view class="shopBook_name">
+          <text class="bookname">{{item.itemName}}</text>
+          <text class="author">{{item.author}}</text>
+          <text class="sales">￥{{item.price}}</text>
+        </view>
+        <view class="shopcaradd" data-id='{{item.mid}}' wx:if="{{(item.checked) ? true : false}}">
+          <image class="shopcaradd_jian" catchtap="numjian" data-isbn="{{item.isbn}}" src="/static/icon/shopCar/jian.png"></image>
+          <view class="shopcaradd_num">{{item.num}}</view>
+          <image class="shopcaradd_jia" catchtap="numjia" data-isbn="{{item.isbn}}" src="/static/icon/shopCar/jia.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class='lowB' wx:if="{{shopCarList.length==0}}">
+    穷逼，你咋啥也没买
+
+  </view>
+
+
+  <view class="shopCarPrice">
+    <view class="shopCarPrice_fath">
+      <view class="shopCarPrice_icon" catchtap="allSelect">
+        <image src="/static/icon/shopCar/jia.png"></image>
+        <text>全选</text>
+      </view>
+      <view class="shopCarPrice_icon" catchtap="clearSelect">
+        <image src="/static/icon/shopCar/jia.png"></image>
+        <text>清空</text>
+      </view>
+    </view>
+    <view class="shopCarPrice_righ">
+      <text>不含运费</text>
+      <text class="shopCarPrice_righ_2">合计</text>
+      <text class="shopCarPrice_righ_3">￥{{shopCarPrice}}</text>
+      <view class="shopCarPrice_pay" catchtap="gotoOrder">
+        <text>结算</text>
+        <text>({{shopCarNum}})</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,319 @@
+.page {
+  background-color: rgba(204, 204, 204, 0.307);
+}
+
+/* 轮播图样式*/
+
+swiper {
+  height: 320rpx;
+  width: 100%;
+}
+
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 导航栏样式 */
+
+.nav {
+  display: flex;
+  height: 240rpx;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+.homenav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+.navimg {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.navfont {
+  font-size: 12px;
+  margin-top: 5rpx;
+}
+
+/* todaybook样式 */
+
+.todaybook {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding-bottom: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.todayone {
+  width: 48%;
+  background-color: rgba(204, 204, 204, 0.205);
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
+
+.todayone:first-child {
+  margin-right: 10rpx;
+}
+
+.todayone:nth-child(3) {
+  margin-right: 10rpx;
+}
+
+.tofont {
+  display: flex;
+  flex-direction: column;
+}
+
+.tofont_one {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.tofont_two {
+  font-size: 20rpx;
+  margin-top: 5px;
+}
+
+.topic_img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* <!-- 首页图书滚动 实现视频左右滑动 --> */
+
+.swiper_lo {
+  background-color: #fff;
+  margin-top: 16rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.swiper_title {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.swiper_goodbook {
+  font-weight: bold;
+}
+
+.swiper_more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #1296db;
+}
+
+.image-group {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.swiper {
+  display: inline-block;
+  width: 210rpx;
+}
+
+.swiper_top {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20rpx;
+}
+
+.swiper_img {
+  width: 200rpx;
+  height: 280rpx;
+}
+
+.book_name {
+  max-width: 99%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+
+.book_auth {
+  max-width: 99%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 21rpx;
+  margin-top: 10rpx;
+  color: #999;
+  overflow: hidden;
+}
+
+.book_price {
+  width: 100%;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+  color: #999;
+}
+
+.book_money {
+  width: 100%;
+  color: red;
+  font-weight: bold;
+  margin-right: 5rpx;
+}
+
+/* 书单推荐css  */
+
+.image-group {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  position: relative;
+}
+
+.swiper_allbook {
+  display: inline-block;
+  width: 335px;
+  margin-right: 10px;
+}
+
+.swiper_more_all {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+}
+
+.allbook {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  line-height: 62rpx;
+  color: #999;
+  overflow: hidden;
+}
+
+.allbookimg {
+  width: 335px;
+  height: 155px;
+  border-radius: 10px;
+}
+
+.allbookfont {
+  max-width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 12rpx;
+}
+
+/* 新年广场 */
+
+.NewYearSquare {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 16rpx;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+
+.NewYear_content {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.NewYear_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 140px;
+  text-align: center;
+  position: relative;
+}
+
+.NewYear_much {
+  width: 55px;
+  height: 30px;
+  background-color: rgba(158, 16, 14, 0.8);
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NewYear_con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  /* margin-right: 15px; *//* padding-right: 20px; *//* box-sizing: border-box; */
+}
+
+.NewYear_con1 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 31rpx;
+  font-weight: 700;
+  color: #262626;
+}
+
+.NewYear_con2 {
+  max-width: 80%;
+  margin-top: 30rpx;
+  line-height: 16px;
+  white-space: wrap;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.NewYear_c {
+  margin-top: 20px;
+  font-size: 22rpx;
+  color: #997f55;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  overflow: hidden;
+}
+.NewYear_c text{
+  border: 1px solid rgba(153,127,85,.6);
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 4px 8px;
+  border-bottom-right-radius: 15px;
+}

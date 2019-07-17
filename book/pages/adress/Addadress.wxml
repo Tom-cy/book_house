@@ -1,0 +1,49 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="Address_all">
+    <view class="input1 callPeo">
+      <text>联系人:</text>
+      <input placeholder="用于收货时联系" value="{{formname}}" name='formname'></input>
+    </view>
+    <view class=" input1 section  ">
+      <view class="section__title">性别:</view>
+      <radio-group name="radio_group" class="section_gap">
+        <label class="man">
+          <radio value="man" style="transform:scale(.7)" data-sex='man' />男</label>
+        <label class="women">
+          <radio value="women" style="transform:scale(.7)" data-sex='women' />女</label>
+      </radio-group>
+    </view>
+
+    <view class="input1 telphone">
+      <text>手机号:</text>
+      <input value="{{formtel}}" name='formtel'></input>
+    </view>
+
+    <view class=" input1 Address" catchtap="gotomap">
+      <text>地址:</text>
+      <input class="input_adre" placeholder="请选择收货地址" value="{{fromAddress}}" name="fromAddress"></input>
+      <image class="imgflo" style="width:60rpx;height:60rpx" src="/static/icon/my/right_more.png"></image>
+    </view>
+
+    <view class=" input1 Address_Detail">
+      <text>详细地址:</text>
+      <input placeholder="如:四期五栋一单元1402" value="{{fromDetailAdre}}" name='fromDetailAdre'></input>
+    </view>
+
+    <view class="input1 Label">
+      <view>标签:</view>
+      <view class="label_text" bindtap="choselabel">
+        <text class="{{snum == 1?'isLabel' : 'label_click'}}" data-value='company' data-num='1' name='company'>公司</text>
+        <text class= "{{snum == 2?'isLabel' : 'label_click'}}"data-value='house' data-num='2' name='house'>家</text>
+        <text class="{{snum == 3?'isLabel' : 'label_click'}}" data-value='scholl' data-num='3' name='scholl'>学校</text>
+      </view>
+    </view>
+  </view>
+  <view class="sureAdress">
+    <checkbox class="checkbox" name='default' bindtap="sureAdres">设为默认地址</checkbox>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit">保存</button>
+    <button form-type="reset">重置</button>
+  </view>
+</form>
