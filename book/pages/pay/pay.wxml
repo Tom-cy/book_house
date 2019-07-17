@@ -1,5 +1,0 @@
- 
-<view>
-  <button data-status="{{payStatus}}" bindtap="pay" class="pay">支付</button>
-  <button data-status="{{cancelStataus}}" bindtap="cancel" class="cancel">取消</button>
-</view>

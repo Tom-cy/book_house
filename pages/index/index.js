@@ -82,6 +82,7 @@ Page({
         let a = []
         res.data.result.list.map(v => {
           if (v.style == 3) {
+
             that.setData({
               todaybookList: a
             })
@@ -97,13 +98,8 @@ Page({
       url: app.globalData.Baseurl + 'currPage=2',
       method: 'get',
       success: function(res) {
-
         res.data.result.list.filter(v => {
-          if (v.dataId == 24) {
-            that.setData({
-              swipergoodbookList: v
-            })
-          }
+         
           // if (v.dataId == 32) {
           //   that.setData({
           //     allBookList: v
@@ -125,7 +121,11 @@ Page({
       success: function(res) {
         if (res.statusCode === 200) {
           res.data.result.list.filter(v => {
-            if (v.dataId == 32) {
+            if (v.dataId == 24) {
+              that.setData({
+                swipergoodbookList: v
+              })
+            } else if (v.dataId == 32) {
               that.setData({
                 allBookList: v
               })
