@@ -25,6 +25,7 @@ Page({
         phoneNumber,
       },
       success: res => {
+        console.log(res)
         let address = res.data.data.filter(v => {
           return v.allData
         })

@@ -38,8 +38,8 @@
         "selectedIconPath": "static/icon/tabbar/home_active.png"
       },
       {
-        "pagePath": "pages/book/book",
-        "text": "交流",
+        "pagePath":"pages/order/order",
+        "text": "我的订单",
         "iconPath": "static/icon/tabbar/book.png",
         "selectedIconPath": "static/icon/tabbar/book_active.png"
       },

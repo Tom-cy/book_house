@@ -39,24 +39,26 @@ Page({
     let ff = myDate.getSeconds().toString()
     let id = aa + bb + cc + dd + ee + ff
     // 联系人所有的数据
-    let allData = {
+    let all = {
+      userName: userName,
+      phoneNumber: phoneNumber,
       adressName: e.detail.value.formname,
       adressTel: e.detail.value.formtel,
       adressAddres: e.detail.value.fromAddress,
       adressAdtail: e.detail.value.fromDetailAdre,
-      adresssex: e.detail.value.radio_group,
+      adresssex: e.detail.value.radio_group === 'man'? '男':'女' ,
       addressBal: chosela,
       addressDetail: defa,
       addressId: id
-      
     }
+    let allData = JSON.stringify(all)
     // 将用户地址信息添加至数据库
     wx.request({
       url: `${api.apiUrl}/addAdress`,
       data: {
         userName,
         phoneNumber,
-        allData
+         allData
       },
       success: res => {
         console.log(res.data.data)

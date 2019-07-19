@@ -25,7 +25,7 @@ Page({
     orderList.status = status;
     this.saveOrderData(orderList, res => {
       if (!res.data.error) {
-        wx.navigateTo({
+        wx.switchTab({
           url: '/pages/order/order',
         })
       }
@@ -37,7 +37,7 @@ Page({
     orderList.status = status;
     this.saveOrderData(orderList, res => {
       if (!res.data.error) {
-        wx.navigateTo({
+        wx.switchTab({
           url: '/pages/order/order'
         })
       }

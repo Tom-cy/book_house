@@ -15,7 +15,8 @@ Page({
       {
         id: 1,
         txt: '我的地址',
-        imgUrl: "../../static/icon/my/adress.png"
+        imgUrl: "../../static/icon/my/adress.png",
+        goSrc:"/pages/adress/adress"
       },
       {
         id: 2,

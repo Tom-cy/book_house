@@ -22,7 +22,6 @@ Page({
     this.setData({
       bookDetailList
     })
-    console.log(app.globalData.loginUserInfo)
     if (!app.globalData.loginUserInfo) {
       wx.navigateTo({
         url: "/pages/login/login",

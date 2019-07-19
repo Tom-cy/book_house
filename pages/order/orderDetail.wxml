@@ -8,13 +8,13 @@
     <view class="orderAdres">
       <view class="orderinfo">
         <view>{{item.orderAdres[0].adressName}}</view>
-        <view>{{item.orderAdres[0].adressTel}}</view>
+        <view>电话:{{item.orderAdres[0].adressTel}}</view>
       </view>
       <view class="adreinfo">
         {{item.orderAdres[0].adressAddres}} {{item.orderAdres[0].adressAdtail}}
       </view>
       <view class='ordertime'>
-        <view>{{item.timeStamp}}</view>
+        <view>订单号:{{item.timeStamp}}</view>
         <view>{{item.orderTime}}</view>
       </view>
     </view>

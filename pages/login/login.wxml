@@ -6,7 +6,7 @@
 
     <form bindsubmit='login'>
         <view class="bt">
-            <input placeholder="请输入手机号" name='phoneNumber' value="{{mobile}}"></input>
+            <input placeholder="请输入账号" name='phoneNumber' value="{{mobile}}"></input>
             <text bindtouchstart="clearMobileInput" class="clearInput{{clearBtnState}}"></text>
         </view>
 

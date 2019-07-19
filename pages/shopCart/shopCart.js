@@ -33,6 +33,7 @@ Page({
   onShow: function() {
     var that = this
     let loginUserInfo = wx.getStorageSync('loginUserInfo')
+    // 小程序登录时候的用户名
     const userName = loginUserInfo.userName
 
     let shopCar = new Promise((resolve, reject) => {
