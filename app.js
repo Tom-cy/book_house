@@ -1,6 +1,7 @@
 // app.js
 const ald = require('./utils/ald-stat.js')
-const api = require('./pages/api/api.js')
+const api = require('./pages/api/apiUrl.js')
+
 App({
   onLaunch: function() {
     // 展示本地存储能力
@@ -40,6 +41,7 @@ App({
     loginUserInfo: null,
     apiUrl: api,
     BaseURL: 'https://www.easy-mock.com/mock/5cf8e0cc5f6a0303145d4251/book',
-    Baseurl: 'https://m.kongfz.com/operation/mobile/ajax/getIndexSquare?'
+    Baseurl: 'https://m.kongfz.com/operation/mobile/ajax/getIndexSquare?',
+    BaseStoreurl:'https://m.kongfz.com/operation/mobile/ajax/getChannelSquare?'
   }
 })

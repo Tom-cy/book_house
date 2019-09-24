@@ -16,7 +16,7 @@
       <text class='navfont'>{{item.font}}</text>
     </view>
   </view>
-  <!-- 首页导航栏模块 -->
+  <!-- 今日上新模块模块 -->
   <view class='todaybook'>
     <navigator class='todayone' wx:for="{{todaybookList}}" wx:key="{{id}}" url="{{item.wxLinkUrl}}">
       <view class='tofont'>
@@ -28,9 +28,47 @@
       </view>
     </navigator>
   </view>
-
+  <!-- 全部拍卖模块 -->
+  <view class="allsale">
+    <view class="allsaletit">
+      <view>拍卖</view>
+    </view>
+    <view class="allsaletop">
+      <view class="allsalelef">
+        <view class="allsaleflex">
+          <text class="tofont_one">{{allsaleonly.title}}</text>
+          <text class="tofont_two">{{allsaleonly.subTitle}}</text>
+        </view>
+        <image class="allsaleimg" src="{{allsaleonly.imgUrl}}"></image>
+      </view>
+      <view class='allsaleother'>
+        <block wx:for="{{allsaleother}}" wx:key="{{id}}" url="{{item.wxLinkUrl}}">
+          <view class="allsaleothle">
+            <view class='tofont'>
+              <text class='tofont_one'>{{item.title}}</text>
+              <text class='tofont_two'>{{item.subTitle}}</text>
+            </view>
+            <view class='topic'>
+              <image class='topic_img' src='{{item.imgUrl}}'></image>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='allsalebook'>
+      <navigator class='todayone' wx:for="{{hotthreedayList}}" wx:key="{{id}}" url="{{item.wxLinkUrl}}">
+        <view class='tofont'>
+          <text class='tofont_one'>{{item.title}}</text>
+          <text class='tofont_two'>{{item.subTitle}}</text>
+        </view>
+        <view class='topic'>
+          <image class='topic_img' src='{{item.imgUrl}}'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
   <!-- 首页好书推荐 实现视频左右滑动 -->
-  <view class='swiper_lo'>
+  <view class='swiper_lo' wx:if="{{swipergoodbookList.name}}">
     <view class='swiper_title'>
       <view class='swiper_goodbook'>{{swipergoodbookList.name}}</view>
       <view class='swiper_more'>
@@ -52,7 +90,7 @@
 
 
   <!-- 首页书单推荐 左右滑动 -->
-  <view class='swiper_lo'>
+  <view class='swiper_lo' wx:if="{{allBookList.name}}">
     <view class='swiper_title'>
       <view class='swiper_goodbook'>{{allBookList.name}}</view>
       <view class='swiper_more'>
@@ -73,7 +111,7 @@
     </scroll-view>
   </view>
   <!-- 新年广场 -->
-  <view class="NewYearSquare">
+  <view class="NewYearSquare" wx:if="{{appDisplayList.name}}">
     <view class='swiper_title'>
       <view class='swiper_goodbook'>{{appDisplayList.name}}</view>
       <view class='swiper_more'>
@@ -96,6 +134,95 @@
           <text wx:for="{{item.tags}}" wx:for-item="items" wx:key="key">{{items}}</text>
         </view>
       </view>
+    </view>
+  </view>
+
+  <!-- 旧书国学热点 -->
+  <view class="oldbook" wx:if="{{oldbookList.name}}">
+    <view class='oldbook_title'>
+      <view class='oldbook_goodbook'>{{oldbookList.name}}</view>
+      <view class='oldbook_more'>
+        <text>更多</text>
+        <image style='width:40rpx;height:40rpx; ' src='../../static/icon/my/right_more.png'></image>
+      </view>
+    </view>
+    <view class="oldbook_content" wx:for="{{oldjson}}" wx:key="{{key}}">
+      <view class="oldbook_img">
+        <image src="{{item.imgUrl}}"></image>
+        <view class="oldbook_much">
+          <text>￥</text>
+          <text>{{item.price}}</text>
+        </view>
+      </view>
+      <view class="oldbook_con">
+        <text class="oldbook_con1">{{item.itemName}}</text>
+        <text class="oldbook_con4">{{item.author}}/{{item.press}}/{{item.pubDate}}/{{item.binding}}</text>
+        <text class="oldbook_con3">{{item.contentIntroduction}}</text>
+      </view>
+    </view>
+    <view class="oldbookchance" catchtap="choose1">
+      <text>换一换</text>
+      <image style="width:20px;height:20px" src="/static/icon/chooose.png"></image>
+    </view>
+  </view>
+
+
+   <!-- 新书-新近出版 -->
+  <view class="oldbook" wx:if="{{newbookList.name}}">
+    <view class='oldbook_title'>
+      <view class='oldbook_goodbook'>{{newbookList.name}}</view>
+      <view class='oldbook_more'>
+        <text>更多</text>
+        <image style='width:40rpx;height:40rpx; ' src='../../static/icon/my/right_more.png'></image>
+      </view>
+    </view>
+    <view class="oldbook_content" wx:for="{{newjson}}" wx:key="{{key}}">
+      <view class="oldbook_img">
+        <image src="{{item.imgUrl}}"></image>
+        <view class="oldbook_much">
+          <text>￥</text>
+          <text>{{item.price}}</text>
+        </view>
+      </view>
+      <view class="oldbook_con">
+        <text class="oldbook_con1">{{item.itemName}}</text>
+        <text class="oldbook_con4">{{item.author}}/{{item.press}}/{{item.pubDate}}/{{item.binding}}</text>
+        <text class="oldbook_con3">{{item.contentIntroduction}}</text>
+      </view>
+    </view>
+    <view class="oldbookchance" catchtap="choose2">
+      <text>换一换</text>
+      <image style="width:20px;height:20px" src="/static/icon/chooose.png"></image>
+    </view>
+  </view>
+
+
+    <!-- 新书销售排行榜  -->
+  <view class="oldbook" wx:if="{{salebookList.name}}">
+    <view class='oldbook_title'>
+      <view class='oldbook_goodbook'>{{salebookList.name}}</view>
+      <view class='oldbook_more'>
+        <text>更多</text>
+        <image style='width:40rpx;height:40rpx; ' src='../../static/icon/my/right_more.png'></image>
+      </view>
+    </view>
+    <view class="oldbook_content" wx:for="{{salejson}}" wx:key="{{key}}">
+      <view class="oldbook_img">
+        <image src="{{item.imgUrl}}"></image>
+        <view class="oldbook_much">
+          <text>￥</text>
+          <text>{{item.price}}</text>
+        </view>
+      </view>
+      <view class="oldbook_con">
+        <text class="oldbook_con1">{{item.itemName}}</text>
+        <text class="oldbook_con4">{{item.author}}/{{item.press}}/{{item.pubDate}}/{{item.binding}}</text>
+        <text class="oldbook_con3">{{item.contentIntroduction}}</text>
+      </view>
+    </view>
+    <view class="oldbookchance" catchtap="choose3">
+      <text>换一换</text>
+      <image style="width:20px;height:20px" src="/static/icon/chooose.png"></image>
     </view>
   </view>
 </view>

@@ -1,0 +1,54 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="Address_all">
+    <view class="input1 callPeo">
+      <text>组件名称:</text>
+      <input placeholder="组件名称" value="{{formname}}" name='formname'></input>
+    </view>
+    <view class=" input1 section  ">
+      <view class="section__title">分类</view>
+      <radio-group name="radio_group1" class="section_gap">
+        <label class="zu1">
+          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />前端组件</label>
+        <label class="zu2">
+          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />测试子组件</label>
+        <label class="zu3">
+          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />分布式工具</label>
+        <label class="zu4">
+          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />应用服务</label>
+        <label class="zu5">
+          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />数据存储</label>
+      </radio-group>
+    </view>
+   <view class=" input1 lang  ">
+      <view class="section__title">开发语言</view>
+      <radio-group name="radio_group2" class="section_gap">
+        <label class="lang1">
+          <radio value="lang1" style="transform:scale(.7)" data-sex='lang1' />Javascript</label>
+        <label class="lang2">
+          <radio value="lang2" style="transform:scale(.7)" data-sex='lang2' />Java</label>
+        <label class="lang3">
+          <radio value="lang3" style="transform:scale(.7)" data-sex='lang3' />Nodejs</label>
+        <label class="lang4">
+          <radio value="lang4" style="transform:scale(.7)" data-sex='lang4' />C++</label>
+        <label class="lang5">
+          <radio value="lang5" style="transform:scale(.7)" data-sex='lang5' />python</label>
+      </radio-group>
+    </view>
+    <view class="input1 telphone">
+      <text>版本:</text>
+      <input value="{{formtel}}" name='formtel'></input>
+    </view>
+    <view class="input1 Label">
+      <view>状态:</view>
+      <view class="label_text" bindtap="choselabel">
+        <text class="{{snum == 1?'isLabel' : 'label_click'}}" data-value='company' data-num='1' name='company'>上架</text>
+        <text class="{{snum == 2?'isLabel' : 'label_click'}}" data-value='house' data-num='2' name='house'>下架</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="btn-area">
+    <button form-type="submit">保存</button>
+    <button form-type="reset">重置</button>
+  </view>
+</form>

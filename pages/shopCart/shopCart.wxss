@@ -1,23 +1,21 @@
-.lowB{
-  text-align: center;
-  margin-top: 100px;
-}
-
 .shopCar {
   position: relative;
-  min-height: 100%;
   padding: 10rpx 10rpx;
   box-sizing: border-box;
-   background-color: rgba(204, 204, 204, 0.63);
+  background-color: rgba(204, 204, 204, 0.63);
 }
-.shopCar_scrl{
-  /* background-color: rgba(204, 204, 204, 0.63);
-  height: 100vh; */
+
+.lowB {
+  height: 100vh;
+  text-align: center;
+  margin-top: 160px;
 }
-.shopcap_scr{
+
+.shopcap_scr {
   padding-bottom: 100rpx;
   box-sizing: border-box;
 }
+
 .shopScroll {
   width: 100%;
   height: 220rpx;
@@ -26,7 +24,7 @@
   flex-wrap: nowrap;
   margin-bottom: 10rpx;
   border-radius: 10px;
-   background-color: rgba(255, 255, 255, 0.568)!important;
+  background-color: rgba(255, 255, 255, 0.568) !important;
 }
 
 .shopIconfath {

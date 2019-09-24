@@ -1,9 +1,11 @@
  {
   "pages": [
+    "pages/bookStore/bookStore",
+    "pages/index/index",
     "pages/my/my",
+    "pages/ms/ms",
     "pages/order/order",
     "pages/order/orderDetail",
-    "pages/index/index",
     "pages/adress/adress",
     "pages/adress/Addadress",
     "pages/adress/map/map",
@@ -18,6 +20,7 @@
     "pages/book/book",
     "pages/myInfo/myInfo",
     "pages/login/login",
+
     "pages/test/test"
   ],
   "window": {
@@ -38,8 +41,8 @@
         "selectedIconPath": "static/icon/tabbar/home_active.png"
       },
       {
-        "pagePath":"pages/order/order",
-        "text": "我的订单",
+        "pagePath":"pages/bookStore/bookStore",
+        "text": "书店",
         "iconPath": "static/icon/tabbar/book.png",
         "selectedIconPath": "static/icon/tabbar/book_active.png"
       },

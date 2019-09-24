@@ -25,8 +25,9 @@ Page({
       },
       {
         id: 3,
-        txt: '客服电话',
-        imgUrl: "../../static/icon/my/tel.png"
+        txt: '面试准备',
+        imgUrl: "../../static/icon/my/tel.png",
+        goSrc: "/pages/ms/ms"
       }
     ],
     orderList: [{

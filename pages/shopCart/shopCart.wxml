@@ -27,8 +27,7 @@
   </view>
 
   <view class='lowB' wx:if="{{shopCarList.length==0}}">
-    穷逼，你咋啥也没买
-
+    您还没有任何商品！
   </view>
 
 

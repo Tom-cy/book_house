@@ -1,0 +1,16 @@
+/* 轮播图样式*/
+
+swiper {
+  height: 320rpx;
+  width: 100%;
+}
+
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
