@@ -131,13 +131,13 @@ Page({
           hotthreedayList: respArray
         })
 
-        // let resdata = res.filter(v => {
-        //   console.log(v)
-        //   return v.dataId === '24'
-        // })
-        // that.setData({
-        // swipergoodbookList: resdata[0]
-        // })
+        let resdata = res.filter(v => {
+          console.log(v)
+          return v.dataId === '24'
+        })
+        that.setData({
+        swipergoodbookList: resdata[0]
+        })
       }
     })
   },
@@ -157,12 +157,12 @@ Page({
               appDisplayList: v
             })
           }
-          let resdata = res.filter(v => {
-            return v.dataId === '24'
-          })
-          that.setData({
-            swipergoodbookList: resdata[0]
-          })
+          // let resdata = res.filter(v => {
+          //   return v.dataId === '24'
+          // })
+          // that.setData({
+          //   swipergoodbookList: resdata[0]
+          // })
           //  if (v.dataId === '33') {
           //   // 旧书，国学数据
           //   wx.setStorageSync("oldbookjson", v.data[0].data)

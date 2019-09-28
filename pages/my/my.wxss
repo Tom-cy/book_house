@@ -13,8 +13,7 @@
 .my_img {
   width: 100rpx;
   height: 100rpx;
-  border-radius: 50%;
-  overflow: hidden;
+  clip-path: circle(50rpx at center);
 }
 
 .my_name {
