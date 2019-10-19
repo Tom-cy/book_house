@@ -32,7 +32,7 @@ Page({
     ],
     orderList: [{
         id: 0,
-        txt: '待付款',
+        txt: '房乐美楼盘',
         imgUrl: "../../static/icon/my/waitPay.png",
         goSrc: "/pages/myInfo/myInfo"
       },

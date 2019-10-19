@@ -1,2 +1,79 @@
-<!--pages/myInfo/myInfo.wxml-->
-<text>pages/myInfo/myInfo.wxml</text>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="Address_all">
+    <view class="input1 callPeo">
+      <text>运营方:</text>
+      <input placeholder="运营方" value="{{formname}}" name='formname'></input>
+    </view>
+
+    <view class="input1 callPeo">
+      <text>楼盘名称:</text>
+      <input placeholder="楼盘名称" value="{{formhouse}}" name='formhouse'></input>
+    </view>
+
+    <view class="input1 callPeo">
+      <text>项目名称:</text>
+      <input placeholder="项目名称" value="{{formxiangmu}}" name='formxiangmu'></input>
+    </view>
+    
+    <view class="input1 callPeo">
+      <text>项目管理人:</text>
+      <input placeholder="项目管理人" value="{{formPeo}}" name='formPeo'></input>
+    </view>
+     <view class="input1 callPeo">
+      <text>项目管理人电话:</text>
+      <input placeholder="项目管理人电话" value="{{formtel}}" name='formtel'></input>
+    </view>
+
+    <view class="input1 callPeo">
+      <text>所属代理:</text>
+      <input placeholder="所属代理" value="{{formdaili}}" name='formdaili'></input>
+    </view>
+    <view class=" input1 section  ">
+      <view class="section__title">楼盘区域</view>
+      <radio-group name="radio_group1" class="section_gap">
+        <label class="zu1">
+          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />南昌</label>
+        <label class="zu2">
+          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />九江</label>
+        <label class="zu3">
+          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />上饶</label>
+        <label class="zu4">
+          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />景德镇</label>
+        <label class="zu5">
+          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />象湖</label>
+      </radio-group>
+    </view>
+    <!-- <view class=" input1 lang  ">
+      <view class="section__title">开发语言</view>
+      <radio-group name="radio_group2" class="section_gap">
+        <label class="lang1">
+          <radio value="lang1" style="transform:scale(.7)" data-sex='lang1' />Javascript</label>
+        <label class="lang2">
+          <radio value="lang2" style="transform:scale(.7)" data-sex='lang2' />Java</label>
+        <label class="lang3">
+          <radio value="lang3" style="transform:scale(.7)" data-sex='lang3' />Nodejs</label>
+        <label class="lang4">
+          <radio value="lang4" style="transform:scale(.7)" data-sex='lang4' />C++</label>
+        <label class="lang5">
+          <radio value="lang5" style="transform:scale(.7)" data-sex='lang5' />python</label>
+      </radio-group>
+    </view> -->
+    <!-- <view class="input1 telphone">
+      <text>版本:</text>
+      <input value="{{formtel}}" name='formtel'></input>
+    </view>
+    -->
+    <view class="input1 Label">
+      <view>状态:</view>
+      <view class="label_text" bindtap="choselabel">
+        <text class="{{snum == 1?'isLabel' : 'label_click'}}" data-value='company' data-num='1' name='company'>上架</text>
+        <text class="{{snum == 2?'isLabel' : 'label_click'}}" data-value='house' data-num='2' name='house'>下架</text>
+      </view>
+    </view>  
+  </view>
+
+  <view class="btn-area">
+    <button form-type="submit">保存</button>
+    <button form-type="reset">重置</button>
+  </view>
+</form>

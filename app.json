@@ -1,8 +1,9 @@
  {
   "pages": [
+    "pages/my/my",
+    "pages/myInfo/myInfo",
     "pages/bookStore/bookStore",
     "pages/index/index",
-    "pages/my/my",
     "pages/ms/ms",
     "pages/order/order",
     "pages/order/orderDetail",
@@ -18,7 +19,6 @@
     "pages/channel/channel",
     "pages/booklist/booklist",
     "pages/book/book",
-    "pages/myInfo/myInfo",
     "pages/login/login",
 
     "pages/test/test"

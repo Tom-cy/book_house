@@ -1,1 +1,99 @@
-/* pages/myInfo/myInfo.wxss */
+.btn-area {
+}
+
+.Address_all {
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.input1 {
+  border-bottom: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.input1 input {
+  margin-left: 20rpx;
+  line-height: 1.5
+}
+
+.callPeo {
+  display: flex;
+}
+
+.section {
+  display: flex;
+}
+
+.section_gap {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.man {
+  margin-left: 40rpx;
+}
+
+.women {
+  margin-left: 40rpx;
+}
+
+.telphone {
+  display: flex;
+}
+
+.Address {
+  position: relative;
+}
+
+.imgflo {
+  position: absolute;
+  right: 0;
+}
+
+.input_adre {
+  min-width: 80%;
+}
+
+.Address_Detail {
+  display: flex;
+}
+
+.Label {
+  display: flex;
+}
+
+.label_text {
+  margin-left: 20rpx;
+}
+
+.label_click {
+  display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  /* border: 1px solid #000; */
+  background-color: #ccc;
+}
+
+.isLabel {
+  background-color: rgb(19, 189, 231);
+    display: inline-block;
+  margin-right: 10px;
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+}
+
+.sureAdress {
+  margin: 0 20rpx;
+  height: 100rpx;
+  line-height: 80rpx;
+  border-bottom: 1px dashed #ccc;
+}
