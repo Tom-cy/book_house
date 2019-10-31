@@ -116,6 +116,7 @@ Page({
     currPage2().then((respone) => {
       if (respone.status === 1) {
         let res = respone.result.list
+        console.log(res)
         var arr1 = []
         var arr2 = []
         res.filter(v => {
@@ -157,12 +158,12 @@ Page({
               appDisplayList: v
             })
           }
-          // let resdata = res.filter(v => {
-          //   return v.dataId === '24'
-          // })
-          // that.setData({
-          //   swipergoodbookList: resdata[0]
-          // })
+          let resdata = res.filter(v => {
+            return v.dataId === '24'
+          })
+          that.setData({
+            swipergoodbookList: resdata[0]
+          })
           //  if (v.dataId === '33') {
           //   // 旧书，国学数据
           //   wx.setStorageSync("oldbookjson", v.data[0].data)

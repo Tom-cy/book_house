@@ -1,4 +1,5 @@
 var swiper = require('../../data/swiperJSON.js')
+var store = require('../../data/storeJSON.js')
 import {
   currPage1ChannelId1081,
   currPage2ChannelId1081,
@@ -9,12 +10,12 @@ Page({
 
   data: {
     indicatorDots: true,
-    indicatorActiveColor:"rgba(255,255,255,.4)",
+    indicatorActiveColor: "rgba(255,255,255,.4)",
     autoplay: true,
     interval: 3000,
     duration: 1000,
     circular: true,
-    
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -23,8 +24,10 @@ Page({
     var that = this
     // 获取首页轮播图数据
     // 获取导航栏数据
+    console.log(store.storejson)
     that.setData({
       swiperList: swiper.swiperjson2,
+      storeJSON: store.storejson
     })
 
     that.currPage1Id1081()
@@ -48,13 +51,13 @@ Page({
   // 获取currPage1ChannelId1081 数据
   currPage1Id1081() {
     currPage1ChannelId1081().then((respone) => {
-      console.log(respone.result)
+      // console.log(respone.result)
     })
   },
   // 获取currPage2ChannelId1081 数据
   currPage2Id1081() {
     currPage2ChannelId1081().then((respone) => {
-      console.log(respone.result)
+      // console.log(respone.result)
     })
   },
   /**

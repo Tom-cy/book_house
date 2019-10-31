@@ -27,9 +27,9 @@ Page({
   formSubmit: function (e) {
     let chosela = this.data.chosela
     if (chosela === 'company') {
-      chosela = "上架"
+      chosela = "true"
     } else {
-      chosela = "下架"
+      chosela = "false"
     }
     let defa = this.data.default
     let userInfo = this.data.userInfo
@@ -57,15 +57,15 @@ Page({
     //   e.detail.value.radio_group2 = 'python'
     // }
     if (e.detail.value.radio_group1 === 'zu1') {
-      e.detail.value.radio_group1 = '南昌'
+      e.detail.value.radio_group1 = '江西省南昌'
     } else if (e.detail.value.radio_group1 === 'zu2') {
-      e.detail.value.radio_group1 = '九江'
+      e.detail.value.radio_group1 = '江西省九江'
     } else if (e.detail.value.radio_group1 === 'zu3') {
-      e.detail.value.radio_group1 = '上饶'
+      e.detail.value.radio_group1 = '江西省上饶'
     } else if (e.detail.value.radio_group1 === 'zu4') {
-      e.detail.value.radio_group1 = '景德镇'
+      e.detail.value.radio_group1 = '江西省景德镇'
     } else {
-      e.detail.value.radio_group1 = '象湖'
+      e.detail.value.radio_group1 = '安徽省合肥'
     }
     let ms = {
       // userName: userName,

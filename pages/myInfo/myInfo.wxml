@@ -32,15 +32,15 @@
       <view class="section__title">楼盘区域</view>
       <radio-group name="radio_group1" class="section_gap">
         <label class="zu1">
-          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />南昌</label>
+          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />江西省南昌</label>
         <label class="zu2">
-          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />九江</label>
+          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />江西省九江</label>
         <label class="zu3">
-          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />上饶</label>
+          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />江西省上饶</label>
         <label class="zu4">
-          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />景德镇</label>
+          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />江西省景德镇</label>
         <label class="zu5">
-          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />象湖</label>
+          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />安徽省合肥</label>
       </radio-group>
     </view>
     <!-- <view class=" input1 lang  ">
