@@ -27,9 +27,9 @@ Page({
   formSubmit: function (e) {
     let chosela = this.data.chosela
     if (chosela === 'company') {
-      chosela = "true"
+      chosela = true
     } else {
-      chosela = "false"
+      chosela = false
     }
     let defa = this.data.default
     let userInfo = this.data.userInfo
