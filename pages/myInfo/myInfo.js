@@ -9,13 +9,13 @@ Page({
     // 运营方
     formname: '58同城',
     // 楼盘名称
-    formhouse:'万达广场',
+    formhouse: '万达广场',
     // 项目代理
-    formdaili:'中欧',
+    formdaili: '中欧',
     // 项目名称
-    formxiangmu:'万达',
+    formxiangmu: '万达',
     // 项目管理人
-    formPeo:'陈***',
+    formPeo: '陈***',
     // 项目管理人电话
     formtel: '********',
     // 状态
@@ -24,7 +24,7 @@ Page({
     userInfo: ''
   },
 
-  formSubmit: function (e) {
+  formSubmit: function(e) {
     let chosela = this.data.chosela
     if (chosela === 'company') {
       chosela = true
@@ -98,7 +98,7 @@ Page({
     wx.navigateBack()
 
   },
-  formReset: function () {
+  formReset: function() {
     this.setData({
       formname: '',
       formhouse: '',
@@ -130,14 +130,14 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     let userInfo = app.globalData.loginUserInfo
     this.setData({
       userInfo
