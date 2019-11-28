@@ -1,50 +1,103 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="Address_all">
     <view class="input1 callPeo">
-      <text>组件名称:</text>
-      <input placeholder="组件名称" value="{{formname}}" name='formname'></input>
+      <text>法人:</text>
+      <input placeholder="法人" value="{{companyFaRen}}" name='companyFaRen'></input>
+    </view>
+
+    <view class="input1 callPeo">
+      <text>行业类型:</text>
+      <input placeholder="行业类型" value="{{companyWork}}" name='companyWork'></input>
+    </view>
+
+    <view class="input1 callPeo">
+      <text>员工规模:</text>
+      <input placeholder="员工规模" value="{{companyPeo}}" name='companyPeo'></input>
+    </view>
+
+    <view class="input1 callPeo">
+      <text>管理员:</text>
+      <input placeholder="管理员" value="{{adminManage}}" name='adminManage'></input>
     </view>
     <view class=" input1 section  ">
-      <view class="section__title">分类</view>
-      <radio-group name="radio_group1" class="section_gap">
+      <!-- companyWhere -->
+      <view class="section__title">公司名称</view>
+      <radio-group name="radio_group3" class="section_gap">
         <label class="zu1">
-          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />前端组件</label>
+          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />盈科行</label>
         <label class="zu2">
-          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />测试子组件</label>
+          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />贝克找房</label>
         <label class="zu3">
-          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />分布式工具</label>
+          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />万科地产</label>
         <label class="zu4">
-          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />应用服务</label>
+          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />中环地产</label>
         <label class="zu5">
-          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />数据存储</label>
+          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />绿地集团</label>
+        <label class="zu6">
+          <radio value="zu6" style="transform:scale(.7)" data-sex='zu6' />中原地产</label>
+        <label class="zu7">
+          <radio value="zu7" style="transform:scale(.7)" data-sex='zu7' />上海建工</label>
+
+        <label class="zu8">
+          <radio value="zu8" style="transform:scale(.7)" data-sex='zu8' />新力地产</label>
+        <label class="zu9">
+          <radio value="zu9" style="transform:scale(.7)" data-sex='zu9' />南天阳光</label>
+        <label class="zu10">
+          <radio value="zu10" style="transform:scale(.7)" data-sex='zu10' />搜房网</label>
       </radio-group>
     </view>
-   <view class=" input1 lang  ">
-      <view class="section__title">开发语言</view>
+    <view class=" input1 section  ">
+      <!-- companyWhere -->
+      <view class="section__title">归属地</view>
+      <radio-group name="radio_group1" class="section_gap">
+        <label class="zu1">
+          <radio value="zu1" style="transform:scale(.7)" data-sex='zu1' />江西省</label>
+        <label class="zu2">
+          <radio value="zu2" style="transform:scale(.7)" data-sex='zu2' />上海市</label>
+        <label class="zu3">
+          <radio value="zu3" style="transform:scale(.7)" data-sex='zu3' />北京市</label>
+        <label class="zu4">
+          <radio value="zu4" style="transform:scale(.7)" data-sex='zu4' />安徽省</label>
+        <label class="zu5">
+          <radio value="zu5" style="transform:scale(.7)" data-sex='zu5' />浙江省</label>
+      </radio-group>
+    </view>
+    <view class=" input1 lang  ">
+      <view class="section__title">上级公司</view>
       <radio-group name="radio_group2" class="section_gap">
         <label class="lang1">
-          <radio value="lang1" style="transform:scale(.7)" data-sex='lang1' />Javascript</label>
+          <radio value="lang1" style="transform:scale(.7)" data-sex='lang1' />盈科行</label>
         <label class="lang2">
-          <radio value="lang2" style="transform:scale(.7)" data-sex='lang2' />Java</label>
+          <radio value="lang2" style="transform:scale(.7)" data-sex='lang2' />万科地产</label>
         <label class="lang3">
-          <radio value="lang3" style="transform:scale(.7)" data-sex='lang3' />Nodejs</label>
+          <radio value="lang3" style="transform:scale(.7)" data-sex='lang3' />中环地产</label>
         <label class="lang4">
-          <radio value="lang4" style="transform:scale(.7)" data-sex='lang4' />C++</label>
+          <radio value="lang4" style="transform:scale(.7)" data-sex='lang4' />自如网</label>
         <label class="lang5">
-          <radio value="lang5" style="transform:scale(.7)" data-sex='lang5' />python</label>
+          <radio value="lang5" style="transform:scale(.7)" data-sex='lang5' />贝克找房</label>
       </radio-group>
     </view>
     <view class="input1 telphone">
-      <text>版本:</text>
-      <input value="{{formtel}}" name='formtel'></input>
+      <text>编号:</text>
+      <input value="{{numberId}}" name='numberId'></input>
     </view>
+
+
     <view class="input1 Label">
       <view>状态:</view>
       <view class="label_text" bindtap="choselabel">
-        <text class="{{snum == 1?'isLabel' : 'label_click'}}" data-value='company' data-num='1' name='company'>上架</text>
-        <text class="{{snum == 2?'isLabel' : 'label_click'}}" data-value='house' data-num='2' name='house'>下架</text>
+        <text class="{{snum == 1?'isLabel' : 'label_click'}}" data-value='business' data-num='1' name='business'>营业中</text>
+        <text class="{{snum == 2?'isLabel' : 'label_click'}}" data-value='close' data-num='2' name='close'>已关闭</text>
       </view>
     </view>
+    <view class="input1 Label">
+      <view>权限是否最大:</view>
+      <view class="label_text" bindtap="choserole">
+        <text class="{{snu == 1?'isLabel' : 'label_click'}}" data-value='rolemax' data-num='1' name='rolemax'>是</text>
+        <text class="{{snu == 2?'isLabel' : 'label_click'}}" data-value='rolemin' data-num='2' name='rolemin'>否</text>
+      </view>
+    </view>
+
   </view>
 
   <view class="btn-area">

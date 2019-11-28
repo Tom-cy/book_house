@@ -25,7 +25,7 @@ Page({
       },
       {
         id: 3,
-        txt: '面试准备',
+        txt: 'FLM模拟数据',
         imgUrl: "../../static/icon/my/tel.png",
         goSrc: "/pages/ms/ms"
       }
